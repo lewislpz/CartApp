@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.lewis.cartapp.backend.cartapp_backend.models.entities.Product;
 import com.lewis.cartapp.backend.cartapp_backend.services.ProductService;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @RestController
 public class ProductController {
@@ -15,10 +14,6 @@ public class ProductController {
     private ProductService service;
 
     @GetMapping("/products")
-    public String getMethodName(@RequestParam String param) {
-        return new String();
-    }
-
     public List<Product> list() {
         return service.findAll();
     }
