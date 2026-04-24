@@ -6,8 +6,8 @@ Script to start the Spring Boot application
 # Get the directory where this script is located
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Change to the project directory
-cd "$script_dir"
+# Save current directory and change to the project directory
+pushd "$script_dir" > /dev/null
 
 echo "Starting Spring Boot application..."
 echo "Running: mvn spring-boot:run"
@@ -22,3 +22,6 @@ else
     echo "Spring Boot application failed to start."
     exit 1
 fi
+
+# Return to the original directory
+popd > /dev/null
