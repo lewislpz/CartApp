@@ -50,3 +50,52 @@ application-secret.yaml
 .aider.chat.history.md
 .aider.input.history
 .aider.tags.cache.v4/
+
+# Additional Spring Boot exclusions
+*.jar
+*.war
+*.ear
+spring-boot-configuration-metadata.json
+spring-configuration-metadata.json
+
+# OS generated files
+*~
+.DS_Store
+Thumbs.db
+
+# IDE specific
+*.swp
+*.swo
+*.swn
+
+# Maven
+.mvn/
+**/mvnw
+**/mvnw.cmd
+**/mvnw.properties
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.sar
+*.par
+*.zip
+*.tar
+*.gz
+*.bz2
+*.xz
+*.7z
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+*.dump
+
+# Logs
+logs/
+*.log
+*.log.*
